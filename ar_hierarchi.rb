@@ -1,5 +1,6 @@
 require './lib/config'
 require './lib/class_finder'
+require './lib/relations_extractor'
 
 module ARHierarchi
   class << self
