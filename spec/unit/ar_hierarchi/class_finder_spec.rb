@@ -10,9 +10,9 @@ RSpec.describe ARHierarchi::ClassFinder do
   end
 
   it "finds all classes" do
-    descendants = described_class.new.get_descendant_of Object
+    descendants = described_class.new.get_descendants_of ActiveRecord::Base
     expect(descendants.map(&:name).sort).to eq(
-        ["User", "User::MobilePhone", "Advertiser", "ActiveRecord::Base",
+        ["User", "User::MobilePhone", "Advertiser",
           "UserCommission", "AbstractActiveRecord", "User::Address"].sort
       )
   end
