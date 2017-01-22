@@ -18,7 +18,7 @@ module ARHierarchi
   end
 
   class Advertiser < AbstractActiveRecord
-    has_many :user_comissions
+    has_many :user_comissions, class_name: 'UserCommission'
     has_many :users, through: :user_comissions
   end
 

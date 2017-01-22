@@ -14,6 +14,7 @@ module ARHierarchi
       data.each do |klass, relations|
         print_relation klass, relations
       end
+      nil
     end
 
     def print_relation klass, relations
